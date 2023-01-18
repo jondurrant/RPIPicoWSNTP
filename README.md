@@ -5,6 +5,8 @@ Runs under FreeRTOS and LWIP SNTP App.
 
 Also runs simple workload to flash an LED on GPIO0.
 
+[Video tutorial](https://youtu.be/Xv8yHjFRB08)
+
 ## Folders
 
 + Port: contains the library port code for the FreeRTOS and LWIP libraries. 

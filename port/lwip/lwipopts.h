@@ -91,7 +91,8 @@
 #define SNTP_SERVER_DNS   1
 void sntpSetTimeSec(uint32_t sec);
 #define SNTP_SET_SYSTEM_TIME(sec) sntpSetTimeSec(sec)
-//NTPAgent::setTimeSec(sec)
+//MEMP_NUM_SYS_TIMEOUTS Needs to be one larger than default for SNTP
+#define MEMP_NUM_SYS_TIMEOUT            (LWIP_NUM_SYS_TIMEOUT_INTERNAL + 1)
 
 //Once an hour
 #define SNTP_UPDATE_DELAY 60000*60

@@ -1,10 +1,13 @@
-add_library(LWIP_PORT INTERFACE)
+add_library(LWIP_PORT STATIC)
 target_include_directories(LWIP_PORT
-    INTERFACE
+    PUBLIC
        ${CMAKE_CURRENT_LIST_DIR}/port/lwip
 #       ${PICO_LWIP_PATH}/src/include/
     )
     
-#set(LWIP_CONTRIB_DIR ${PICO_LWIP_CONTRIB_PATH})
-#include(${PICO_LWIP_CONTRIB_PATH}/Filelists.cmake)
-#add_subdirectory(${PICO_LWIP_PATH} lwip)
+target_sources(LWIP_PORT PUBLIC
+     ${PICO_SDK_PATH}/lib/lwip/src/apps/sntp/sntp.c
+)
+
+# Add the standard library to the build
+target_link_libraries(LWIP_PORT PUBLIC pico_stdlib pico_cyw43_arch_lwip_sys_freertos FreeRTOS-Kernel FREERTOS_PORT)

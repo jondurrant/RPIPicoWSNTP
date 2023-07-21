@@ -143,7 +143,7 @@ void main_task(void *params){
 
     while(true) {
 
-    	runTimeStats();
+    	//runTimeStats();
 
     	if (rtc_get_datetime(&d)) {
     		printf("RTC: %d-%d-%d %d:%d:%d\n",

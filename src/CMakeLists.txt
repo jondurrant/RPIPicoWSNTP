@@ -3,7 +3,6 @@ add_executable(${NAME}
         WifiHelper.cpp
         Agent.cpp
         BlinkAgent.cpp
-        ${PICO_SDK_PATH}/lib/lwip/src/apps/sntp/sntp.c
         )
   
 

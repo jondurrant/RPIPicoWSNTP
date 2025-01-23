@@ -7,6 +7,8 @@ Also runs simple workload to flash an LED on GPIO0.
 
 [Video tutorial](https://youtu.be/Xv8yHjFRB08)
 
+This was tested against Pico SDK 1.5.1. Note there is a bug in SDK 2.1.0 which will crash this code. See issue and fix here: https://github.com/raspberrypi/pico-sdk/issues/2101
+
 ## Folders
 
 + Port: contains the library port code for the FreeRTOS and LWIP libraries. 

@@ -21,6 +21,10 @@ Submodule are used so clone with the command:
 $ git clone --recurse-submodules https://github.com/jondurrant/RPIPicoWSNTP
 ```
 
+To prevent leaking Wifi credentials into Github I pick these up from environment variables. These should be set in the shell or terminal before you run cmake:
++ WIFI_SSID
++ WIFI_PASSWORD
+
 Built through cmake:
 ```
 mkdir build
@@ -28,3 +32,5 @@ cd build
 cmake ..
 make
 ```
+
+Binaries (elf and uf2) will be in the folder "build/src".
